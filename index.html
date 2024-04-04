@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOMMERCE</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .company-name {
+            font-size: 1.5em;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        header form {
+            margin-right: 10px;
+        }
+
+        header form input[type="hidden"] {
+            display: none;
+        }
+
+        header form button {
+            padding: 10px 20px;
+            background-color: #337ab7;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .admin-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .admin-link:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-icons a {
+            margin: 0 5px;
+        }
+
+        .social-icons img {
+            width: 30px;
+        }
+        .loading-spinner {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+        .loading-spinner .spinner {
+            border: 4px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 4px solid #3498db;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+    
+    	<div id="loading-spinner" class="loading-spinner">
+			<div class="spinner"></div>
+		</div>
+
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo">
+        </div>
+
+        <h1 class="company-name">COMPANY NAME</h1>
+
+        <form action="MainRequest" method="post">   
+            <input type="hidden" name="action" value="Registration">
+			<button type="submit">Register</button>
+		</form>
+		
+		<form action="MainRequest" method="post">
+            <input type="hidden" name="action" value="Login">
+            <button type="submit">Login</button>
+        </form>
+
+        <a href="MainRequest?action=Admin" class="admin-link">Admin</a>
+
+    </header>
+       <br>
+   
+<h3> Welcome to [Your Company Name] - Your Ultimate Online Shopping Destination </h3>
+<p>At [Your Company Name], we are dedicated to providing you with an unparalleled shopping experience right from the comfort of your home. Discover a vast range of products curated from top brands and trusted sellers, all available at your fingertips </p>
+
+<h3> Explore Our Extensive Product Categories  </h3>
+<p>From electronics to fashion, home decor to personal care, we offer a diverse selection of high-quality products to suit every need and budget. Whether you're searching for the latest gadgets, trendy apparel, or stylish home furnishings, you'll find it all here.</p>
+
+<h3> Shop with Confidence  </h3>
+<p>We prioritize your satisfaction and strive to exceed your expectations with every purchase. With secure payment options and hassle-free returns, you can shop with confidence knowing that your transactions are safe and your satisfaction is guaranteed.</p>
+
+<h3> Stay Updated with Our Latest Offers and Promotions  </h3>
+<p>Be the first to know about our exclusive deals, seasonal sales, and exciting promotions by subscribing to our newsletter. Join our community of savvy shoppers and never miss out on a great deal again!</p>
+
+<h3> Experience Exceptional Customer Service  </h3>
+<p>Our dedicated customer support team is here to assist you every step of the way. Whether you have questions about a product, need help with your order, or simply want to share feedback, we're always here to help.</p>
+
+<h3> Start Your Shopping Journey Today  </h3>
+<p>Browse our website now to discover an unparalleled selection of products, unbeatable prices, and exceptional service. Join the millions of satisfied customers who trust [Your Company Name] for all their online shopping needs.</p>
+   <br>
+    <footer>
+        <div class="copyright">&copy; 2024 Company Name. All Rights
+            Reserved.</div>
+        <div class="social-icons">
+            Add social media icons here
+            Example:
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+    
+        <script>
+        document.getElementById("registrationForm").addEventListener("submit", function() {
+            showLoadingSpinner();
+        });
+
+        function showLoadingSpinner() {
+            document.getElementById("loading-spinner").style.display = "block";
+            // Optionally, disable the button to prevent multiple submissions
+            document.getElementById("registrationButton").disabled = true;
+        }
+    </script>
+    
+    
+
+</body>
+
+</html>

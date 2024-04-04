@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+	id="WebApp_ID" version="5.0">
+	
+	<servlet>
+		<servlet-name>Main</servlet-name>
+		<servlet-class>youtube.krishnaitprojects.Main</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Main</servlet-name>
+		<url-pattern>/MainRequest</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>youtube.krishnaitprojects.bean.RegistrationLoginBean</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/RegisterRequest</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>youtube.krishnaitprojects.bean.RegistrationLoginBean</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/LoginRequest</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Dashboard</servlet-name>
+		<servlet-class>youtube.krishnaitprojects.bean.DashboardBean</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Dashboard</servlet-name>
+		<url-pattern>/DashboardBeanServlet</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>ProductAdd</servlet-name>
+		<servlet-class>youtube.krishnaitprojects.bean.ProductsBean</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductAdd</servlet-name>
+		<url-pattern>/addProductRequest</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>Registration.jsp</welcome-file>
+		<welcome-file>Login.jsp</welcome-file>
+		<welcome-file>DashboardCustomer.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
